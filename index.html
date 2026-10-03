@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Αγωνιστικές - Χώροι & Στέκια</title>
+    
+    <!-- Εισαγωγή του Tailwind CSS για το styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Εισαγωγή της γραμματοσειράς Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Εισαγωγή του Font Awesome για τα εικονίδια στα κουμπιά -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Απαλό γκρι φόντο */
+        }
+        
+        /* Εφέ στα κουμπιά κατά το hover (πέρασμα του ποντικιού) */
+        .btn-hover-effect {
+            transition: all 0.3s ease;
+        }
+        .btn-hover-effect:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Προσαρμοσμένα χρώματα για τα κοινωνικά δίκτυα */
+        .btn-instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+        }
+        .btn-facebook {
+            background-color: #1877F2;
+            color: white;
+        }
+        .btn-website {
+            background-color: #374151; /* Σκούρο γκρι */
+            color: white;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased min-h-screen py-10 px-4 sm:px-6 lg:px-8">
+
+    <div class="max-w-3xl mx-auto space-y-10">
+        
+        <!-- Κεφαλίδα / Λογότυπο -->
+        <header class="flex justify-center mb-12">
+            <img src="Αγωνιστικές.png" alt="Αγωνιστικές Logo" class="h-32 object-contain drop-shadow-md hover:scale-105 transition-transform duration-300">
+        </header>
+
+        <!-- Λίστα Χώρων -->
+        <main class="space-y-8">
+            
+            <!-- Στοιχείο 1: Βιβλιοκαφέ Εκτός των Τειχών -->
+            <article class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8 hover:shadow-md transition-shadow">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-100">
+                    Βιβλιοκαφέ Εκτός των Τειχών
+                </h2>
+                
+                <div class="flex flex-col sm:flex-row items-center gap-6">
+                    <!-- Φωτογραφία -->
+                    <div class="flex-shrink-0">
+                        <img src="Εκτός των Τειχών.jpg" alt="Εκτός των Τειχών" class="w-32 h-32 rounded-xl object-cover shadow-sm border border-gray-200">
+                    </div>
+                    
+                    <!-- Κουμπιά Links -->
+                    <div class="flex flex-wrap gap-3 w-full justify-center sm:justify-start">
+                        <a href="https://www.instagram.com/ektos_twn_teixwn/?__pwa=1" target="_blank" rel="noopener noreferrer" class="btn-instagram btn-hover-effect px-5 py-2.5 rounded-lg font-semibold flex items-center gap-2 text-sm">
+                            <i class="fab fa-instagram text-lg"></i> Instagram
+                        </a>
+                        <a href="https://www.facebook.com/ektostwnteixwn" target="_blank" rel="noopener noreferrer" class="btn-facebook btn-hover-effect px-5 py-2.5 rounded-lg font-semibold flex items-center gap-2 text-sm">
+                            <i class="fab fa-facebook text-lg"></i> Facebook
+                        </a>
+                        <a href="https://ektostonteixon.gr/" target="_blank" rel="noopener noreferrer" class="btn-website btn-hover-effect px-5 py-2.5 rounded-lg font-semibold flex items-center gap-2 text-sm">
+                            <i class="fas fa-globe text-lg"></i> Website
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Στοιχείο 2: Σφεντόντα -->
+            <article class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8 hover:shadow-md transition-shadow">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-100">
+                    Σφεντόντα
+                </h2>
+                
+                <div class="flex flex-col sm:flex-row items-center gap-6">
+                    <!-- Φωτογραφία -->
+                    <div class="flex-shrink-0">
+                        <img src="Σφεντόνα.jpg" alt="Σφεντόντα" class="w-32 h-32 rounded-xl object-cover shadow-sm border border-gray-200">
+                    </div>
+                    
+                    <!-- Κουμπιά Links -->
+                    <div class="flex flex-wrap gap-3 w-full justify-center sm:justify-start">
+                        <a href="https://www.instagram.com/steki.sfentona/?__pwa=1" target="_blank" rel="noopener noreferrer" class="btn-instagram btn-hover-effect px-5 py-2.5 rounded-lg font-semibold flex items-center gap-2 text-sm">
+                            <i class="fab fa-instagram text-lg"></i> Instagram
+                        </a>
+                        <a href="https://www.facebook.com/steki.sfentona" target="_blank" rel="noopener noreferrer" class="btn-facebook btn-hover-effect px-5 py-2.5 rounded-lg font-semibold flex items-center gap-2 text-sm">
+                            <i class="fab fa-facebook text-lg"></i> Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Στοιχείο 3: Ανάστροφα -->
+            <article class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8 hover:shadow-md transition-shadow">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-100">
+                    Ανάστροφα
+                </h2>
+                
+                <div class="flex flex-col sm:flex-row items-center gap-6">
+                    <!-- Φωτογραφία -->
+                    <div class="flex-shrink-0">
+                        <img src="Αναστροφα.png" alt="Ανάστροφα" class="w-32 h-32 rounded-xl object-contain shadow-sm border border-gray-200 bg-gray-50 p-2">
+                    </div>
+                    
+                    <!-- Κουμπιά Links -->
+                    <div class="flex flex-wrap gap-3 w-full justify-center sm:justify-start">
+                        <a href="https://www.instagram.com/anastrofa_patra/?__pwa=1" target="_blank" rel="noopener noreferrer" class="btn-instagram btn-hover-effect px-5 py-2.5 rounded-lg font-semibold flex items-center gap-2 text-sm">
+                            <i class="fab fa-instagram text-lg"></i> Instagram
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100092302447592" target="_blank" rel="noopener noreferrer" class="btn-facebook btn-hover-effect px-5 py-2.5 rounded-lg font-semibold flex items-center gap-2 text-sm">
+                            <i class="fab fa-facebook text-lg"></i> Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Στοιχείο 4: Ρωγμή -->
+            <article class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8 hover:shadow-md transition-shadow">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 pb-2 border-b border-gray-100">
+                    Ρωγμή
+                </h2>
+                
+                <div class="flex flex-col sm:flex-row items-center gap-6">
+                    <!-- Φωτογραφία -->
+                    <div class="flex-shrink-0">
+                        <img src="Ρωγμή.jpg" alt="Ρωγμή" class="w-32 h-32 rounded-xl object-cover shadow-sm border border-gray-200">
+                    </div>
+                    
+                    <!-- Κουμπιά Links -->
+                    <div class="flex flex-wrap gap-3 w-full justify-center sm:justify-start">
+                        <a href="https://www.instagram.com/rogmi_xanthi/?__pwa=1" target="_blank" rel="noopener noreferrer" class="btn-instagram btn-hover-effect px-5 py-2.5 rounded-lg font-semibold flex items-center gap-2 text-sm">
+                            <i class="fab fa-instagram text-lg"></i> Instagram
+                        </a>
+                        <a href="https://www.facebook.com/rogmixanthi" target="_blank" rel="noopener noreferrer" class="btn-facebook btn-hover-effect px-5 py-2.5 rounded-lg font-semibold flex items-center gap-2 text-sm">
+                            <i class="fab fa-facebook text-lg"></i> Facebook
+                        </a>
+                        <a href="https://rogmixanthi.blogspot.com/" target="_blank" rel="noopener noreferrer" class="btn-website btn-hover-effect px-5 py-2.5 rounded-lg font-semibold flex items-center gap-2 text-sm">
+                            <i class="fas fa-globe text-lg"></i> Blogspot
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </main>
+        
+        <!-- Υποσέλιδο -->
+        <footer class="text-center text-gray-500 text-sm mt-12 pb-6">
+            &copy; 2026 Αγωνιστικές. Όλα τα δικαιώματα διατηρούνται.
+        </footer>
+    </div>
+
+</body>
+</html>
