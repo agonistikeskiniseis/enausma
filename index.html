@@ -8,7 +8,7 @@
     <!-- Εισαγωγή του Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Εισαγωγή της γραμματοσειράς Inter -->
+    <!-- Εισαγωγή γραμματοσειράς Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <!-- Εισαγωγή του Font Awesome για τα εικονίδια -->
@@ -18,139 +18,145 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-        
-        /* Ομαλή μετάβαση για τα εφέ στα κουμπιά και τις κάρτες */
-        .hover-effect {
-            transition: all 0.3s ease;
+        /* Απαλό εφέ ανύψωσης όταν το ποντίκι είναι πάνω από τις κάρτες/κουμπιά */
+        .hover-lift {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
         }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-200 antialiased min-h-screen py-10 px-4 sm:px-6 lg:px-8">
+<body class="bg-gray-900 text-gray-200 antialiased min-h-screen py-8 px-4 sm:px-6 lg:px-8">
 
-    <div class="max-w-2xl mx-auto space-y-10">
+    <div class="max-w-3xl mx-auto space-y-10">
         
-        <!-- Κεφαλίδα / Λογότυπο -->
-        <header class="flex justify-center mb-10">
-            <img src="Αγωνιστικές.png" alt="Αγωνιστικές Logo" class="max-w-xs w-full h-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:scale-105 hover-effect">
+        <!-- Κεφαλίδα / Κεντρικό Λογότυπο -->
+        <header class="flex justify-center mb-12">
+            <div class="bg-gray-200 p-3 sm:p-4 rounded-xl shadow-[0_0_20px_rgba(255,255,255,0.05)] hover-lift">
+                <img src="Αγωνιστικές_2.png" alt="Αγωνιστικές Logo" class="max-w-[280px] sm:max-w-md w-full h-auto object-contain">
+            </div>
         </header>
 
-        <!-- Λίστα Χώρων -->
+        <!-- Λίστα Χώρων / Κάρτες -->
         <main class="space-y-6">
             
-            <article class="bg-gray-800 rounded-xl shadow-lg border border-gray-700 p-5 hover:shadow-2xl hover:border-gray-600 hover-effect">
-                <h2 class="text-xl font-bold text-white mb-4 pb-2 border-b border-gray-700">
-                    Αγωνιστικές Κινήσεις
-                </h2>
+            <article class="bg-gray-800 rounded-2xl shadow-lg border border-gray-700 p-6 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:border-gray-500 transition-colors duration-300">
+                <!-- Φωτογραφία -->
+                <div class="w-32 h-32 flex-shrink-0 bg-gray-100 rounded-xl overflow-hidden p-1 shadow-inner">
+                    <img src="Αγωνιστικές_Κινήσεις.png" alt="Αγωνιστικές Κινήσεις" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/128x128/374151/ffffff?text=Logo'">
+                </div>
                 
-                <div class="flex flex-col sm:flex-row items-center sm:items-stretch gap-5">
-                    <!-- Φωτογραφία -->
-                    <img src="Αγωνιστικές_Κινήσεις.jpg" alt="Αγωνιστικές Κινήσεις" class="w-28 h-28 rounded-lg object-cover flex-shrink-0 shadow-md bg-gray-700" onerror="this.src='https://placehold.co/112x112/374151/ffffff?text=Logo'">
+                <!-- Πληροφορίες & Κουμπιά -->
+                <div class="flex flex-col w-full text-center sm:text-left">
+                    <h2 class="text-2xl font-bold text-white mb-4">Αγωνιστικές Κινήσεις</h2>
                     
-                    <!-- Κουμπιά Links (Κάθετη διάταξη) -->
-                    <div class="flex flex-col w-full flex-grow gap-2 justify-center">
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-3 justify-center sm:justify-start">
                         <a href="https://www.instagram.com/agonistikes_kiniseis/?__pwa=1" target="_blank" rel="noopener noreferrer" 
-                           class="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white font-semibold hover:opacity-90 hover:-translate-y-0.5 hover-effect shadow-md">
-                            <i class="fab fa-instagram text-lg"></i> Instagram
+                           class="flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white font-semibold hover-lift shadow-md">
+                            <i class="fab fa-instagram text-xl"></i> Instagram
                         </a>
                         <a href="https://www.facebook.com/profile.php?id=100076178547768" target="_blank" rel="noopener noreferrer" 
-                           class="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-[#1877F2] text-white font-semibold hover:bg-[#166fe5] hover:-translate-y-0.5 hover-effect shadow-md">
-                            <i class="fab fa-facebook text-lg"></i> Facebook
+                           class="flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-[#1877F2] hover:bg-[#166fe5] text-white font-semibold hover-lift shadow-md transition-colors">
+                            <i class="fab fa-facebook text-xl"></i> Facebook
                         </a>
                         <a href="https://www.agonistikeskiniseis.org/" target="_blank" rel="noopener noreferrer" 
-                           class="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-gray-600 text-white font-semibold hover:bg-gray-500 hover:-translate-y-0.5 hover-effect shadow-md">
-                            <i class="fas fa-globe text-lg"></i> Website
+                           class="flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-gray-700 hover:bg-gray-600 text-white font-semibold hover-lift shadow-md transition-colors">
+                            <i class="fas fa-globe text-xl"></i> Website
                         </a>
                     </div>
                 </div>
             </article>
 
-            <article class="bg-gray-800 rounded-xl shadow-lg border border-gray-700 p-5 hover:shadow-2xl hover:border-gray-600 hover-effect">
-                <h2 class="text-xl font-bold text-white mb-4 pb-2 border-b border-gray-700">
-                    Εκτός των Τειχών
-                </h2>
+            <article class="bg-gray-800 rounded-2xl shadow-lg border border-gray-700 p-6 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:border-gray-500 transition-colors duration-300">
+                <div class="w-32 h-32 flex-shrink-0 bg-gray-700 rounded-xl overflow-hidden shadow-inner">
+                    <img src="Εκτός των Τειχών.jpg" alt="Εκτός των Τειχών" class="w-full h-full object-cover">
+                </div>
                 
-                <div class="flex flex-col sm:flex-row items-center sm:items-stretch gap-5">
-                    <img src="Εκτός των Τειχών.jpg" alt="Εκτός των Τειχών" class="w-28 h-28 rounded-lg object-cover flex-shrink-0 shadow-md bg-gray-700">
+                <div class="flex flex-col w-full text-center sm:text-left">
+                    <h2 class="text-2xl font-bold text-white mb-4">Εκτός των Τειχών</h2>
                     
-                    <div class="flex flex-col w-full flex-grow gap-2 justify-center">
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-3 justify-center sm:justify-start">
                         <a href="https://www.instagram.com/ektos_twn_teixwn/?__pwa=1" target="_blank" rel="noopener noreferrer" 
-                           class="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white font-semibold hover:opacity-90 hover:-translate-y-0.5 hover-effect shadow-md">
-                            <i class="fab fa-instagram text-lg"></i> Instagram
+                           class="flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white font-semibold hover-lift shadow-md">
+                            <i class="fab fa-instagram text-xl"></i> Instagram
                         </a>
                         <a href="https://www.facebook.com/ektostwnteixwn" target="_blank" rel="noopener noreferrer" 
-                           class="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-[#1877F2] text-white font-semibold hover:bg-[#166fe5] hover:-translate-y-0.5 hover-effect shadow-md">
-                            <i class="fab fa-facebook text-lg"></i> Facebook
+                           class="flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-[#1877F2] hover:bg-[#166fe5] text-white font-semibold hover-lift shadow-md transition-colors">
+                            <i class="fab fa-facebook text-xl"></i> Facebook
                         </a>
                         <a href="https://ektostonteixon.gr/" target="_blank" rel="noopener noreferrer" 
-                           class="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-gray-600 text-white font-semibold hover:bg-gray-500 hover:-translate-y-0.5 hover-effect shadow-md">
-                            <i class="fas fa-globe text-lg"></i> Website
+                           class="flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-gray-700 hover:bg-gray-600 text-white font-semibold hover-lift shadow-md transition-colors">
+                            <i class="fas fa-globe text-xl"></i> Website
                         </a>
                     </div>
                 </div>
             </article>
 
-            <article class="bg-gray-800 rounded-xl shadow-lg border border-gray-700 p-5 hover:shadow-2xl hover:border-gray-600 hover-effect">
-                <h2 class="text-xl font-bold text-white mb-4 pb-2 border-b border-gray-700">
-                    Σφεντόντα
-                </h2>
+            <article class="bg-gray-800 rounded-2xl shadow-lg border border-gray-700 p-6 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:border-gray-500 transition-colors duration-300">
+                <div class="w-32 h-32 flex-shrink-0 bg-gray-700 rounded-xl overflow-hidden shadow-inner">
+                    <img src="Σφεντόνα.jpg" alt="Σφεντόνα" class="w-full h-full object-cover">
+                </div>
                 
-                <div class="flex flex-col sm:flex-row items-center sm:items-stretch gap-5">
-                    <img src="Σφεντόνα.jpg" alt="Σφεντόντα" class="w-28 h-28 rounded-lg object-cover flex-shrink-0 shadow-md bg-gray-700">
+                <div class="flex flex-col w-full text-center sm:text-left justify-center">
+                    <h2 class="text-2xl font-bold text-white mb-4">Σφεντόνα</h2>
                     
-                    <div class="flex flex-col w-full flex-grow gap-2 justify-center">
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-3 justify-center sm:justify-start">
                         <a href="https://www.instagram.com/steki.sfentona/?__pwa=1" target="_blank" rel="noopener noreferrer" 
-                           class="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white font-semibold hover:opacity-90 hover:-translate-y-0.5 hover-effect shadow-md">
-                            <i class="fab fa-instagram text-lg"></i> Instagram
+                           class="flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white font-semibold hover-lift shadow-md">
+                            <i class="fab fa-instagram text-xl"></i> Instagram
                         </a>
                         <a href="https://www.facebook.com/steki.sfentona" target="_blank" rel="noopener noreferrer" 
-                           class="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-[#1877F2] text-white font-semibold hover:bg-[#166fe5] hover:-translate-y-0.5 hover-effect shadow-md">
-                            <i class="fab fa-facebook text-lg"></i> Facebook
+                           class="flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-[#1877F2] hover:bg-[#166fe5] text-white font-semibold hover-lift shadow-md transition-colors">
+                            <i class="fab fa-facebook text-xl"></i> Facebook
                         </a>
                     </div>
                 </div>
             </article>
 
-            <article class="bg-gray-800 rounded-xl shadow-lg border border-gray-700 p-5 hover:shadow-2xl hover:border-gray-600 hover-effect">
-                <h2 class="text-xl font-bold text-white mb-4 pb-2 border-b border-gray-700">
-                    Ανάστροφα
-                </h2>
+            <article class="bg-gray-800 rounded-2xl shadow-lg border border-gray-700 p-6 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:border-gray-500 transition-colors duration-300">
+                <!-- Ειδικό ανοιχτόχρωμο φόντο για να ξεχωρίζει το κόκκινο λογότυπο (όπως ζητήθηκε) -->
+                <div class="w-32 h-32 flex-shrink-0 bg-gray-200 rounded-xl overflow-hidden p-2 shadow-inner">
+                    <img src="Αναστροφα.png" alt="Ανάστροφα" class="w-full h-full object-contain">
+                </div>
                 
-                <div class="flex flex-col sm:flex-row items-center sm:items-stretch gap-5">
-                    <img src="Αναστροφα.png" alt="Ανάστροφα" class="w-28 h-28 rounded-lg object-contain bg-gray-200 p-1 flex-shrink-0 shadow-md">
+                <div class="flex flex-col w-full text-center sm:text-left justify-center">
+                    <h2 class="text-2xl font-bold text-white mb-4">Ανάστροφα</h2>
                     
-                    <div class="flex flex-col w-full flex-grow gap-2 justify-center">
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-3 justify-center sm:justify-start">
                         <a href="https://www.instagram.com/anastrofa_patra/?__pwa=1" target="_blank" rel="noopener noreferrer" 
-                           class="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white font-semibold hover:opacity-90 hover:-translate-y-0.5 hover-effect shadow-md">
-                            <i class="fab fa-instagram text-lg"></i> Instagram
+                           class="flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white font-semibold hover-lift shadow-md">
+                            <i class="fab fa-instagram text-xl"></i> Instagram
                         </a>
                         <a href="https://www.facebook.com/profile.php?id=100092302447592" target="_blank" rel="noopener noreferrer" 
-                           class="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-[#1877F2] text-white font-semibold hover:bg-[#166fe5] hover:-translate-y-0.5 hover-effect shadow-md">
-                            <i class="fab fa-facebook text-lg"></i> Facebook
+                           class="flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-[#1877F2] hover:bg-[#166fe5] text-white font-semibold hover-lift shadow-md transition-colors">
+                            <i class="fab fa-facebook text-xl"></i> Facebook
                         </a>
                     </div>
                 </div>
             </article>
 
-            <article class="bg-gray-800 rounded-xl shadow-lg border border-gray-700 p-5 hover:shadow-2xl hover:border-gray-600 hover-effect">
-                <h2 class="text-xl font-bold text-white mb-4 pb-2 border-b border-gray-700">
-                    Ρωγμή
-                </h2>
+            <article class="bg-gray-800 rounded-2xl shadow-lg border border-gray-700 p-6 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:border-gray-500 transition-colors duration-300">
+                <div class="w-32 h-32 flex-shrink-0 bg-gray-700 rounded-xl overflow-hidden shadow-inner">
+                    <img src="Ρωγμή.jpg" alt="Ρωγμή" class="w-full h-full object-cover">
+                </div>
                 
-                <div class="flex flex-col sm:flex-row items-center sm:items-stretch gap-5">
-                    <img src="Ρωγμή.jpg" alt="Ρωγμή" class="w-28 h-28 rounded-lg object-cover flex-shrink-0 shadow-md bg-gray-700">
+                <div class="flex flex-col w-full text-center sm:text-left">
+                    <h2 class="text-2xl font-bold text-white mb-4">Ρωγμή</h2>
                     
-                    <div class="flex flex-col w-full flex-grow gap-2 justify-center">
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-3 justify-center sm:justify-start">
                         <a href="https://www.instagram.com/rogmi_xanthi/?__pwa=1" target="_blank" rel="noopener noreferrer" 
-                           class="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white font-semibold hover:opacity-90 hover:-translate-y-0.5 hover-effect shadow-md">
-                            <i class="fab fa-instagram text-lg"></i> Instagram
+                           class="flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white font-semibold hover-lift shadow-md">
+                            <i class="fab fa-instagram text-xl"></i> Instagram
                         </a>
                         <a href="https://www.facebook.com/rogmixanthi" target="_blank" rel="noopener noreferrer" 
-                           class="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-[#1877F2] text-white font-semibold hover:bg-[#166fe5] hover:-translate-y-0.5 hover-effect shadow-md">
-                            <i class="fab fa-facebook text-lg"></i> Facebook
+                           class="flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-[#1877F2] hover:bg-[#166fe5] text-white font-semibold hover-lift shadow-md transition-colors">
+                            <i class="fab fa-facebook text-xl"></i> Facebook
                         </a>
                         <a href="https://rogmixanthi.blogspot.com/" target="_blank" rel="noopener noreferrer" 
-                           class="w-full flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-gray-600 text-white font-semibold hover:bg-gray-500 hover:-translate-y-0.5 hover-effect shadow-md">
-                            <i class="fas fa-globe text-lg"></i> Blogspot
+                           class="flex items-center justify-center gap-2 py-2 px-4 rounded-lg bg-gray-700 hover:bg-gray-600 text-white font-semibold hover-lift shadow-md transition-colors">
+                            <i class="fas fa-globe text-xl"></i> Website
                         </a>
                     </div>
                 </div>
