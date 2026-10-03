@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Αγωνιστικές - Χώροι & Στέκια</title>
+    
+    <!-- Φόρτωση Tailwind CSS για το styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Φόρτωση γραμματοσειράς Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Φόρτωση εικονιδίων FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hover-lift {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-2px);
+        }
+        /* Προσαρμογές για ομαλή εμφάνιση */
+        .btn-social {
+            transition: all 0.2s ease-in-out;
+        }
+        .btn-social:hover {
+            filter: brightness(1.1);
+        }
+    </style>
+</head>
+<!-- Εφαρμογή Light Theme (Φωτεινό Θέμα) -->
+<body class="bg-slate-50 text-slate-900 antialiased min-h-screen py-10 px-4 sm:px-6 lg:px-8">
+
+    <div class="max-w-2xl mx-auto space-y-10">
+        
+        <header class="flex justify-center mb-8">
+            <!-- Κεντρικό πλαίσιο για το βασικό λογότυπο -->
+            <div class="bg-white p-5 rounded-3xl shadow-sm border border-slate-200 w-full max-w-lg hover-lift">
+                <img src="Αγωνιστικές_2.png" alt="Αγωνιστικές Logo" class="w-full h-auto object-contain">
+            </div>
+        </header>
+
+        <main class="space-y-6">
+            
+            <!-- Χρήση items-center για κατακόρυφη στοίχιση στο κέντρο -->
+            <article class="bg-white rounded-3xl shadow-sm border border-slate-200 p-6 flex flex-col sm:flex-row items-center gap-6 hover:shadow-md transition-shadow duration-300">
+                <!-- Εικόνα αριστερά -->
+                <div class="w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden p-2 flex items-center justify-center">
+                    <img src="Αγωνιστικές_Κινήσεις.png" alt="Αγωνιστικές Κινήσεις" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/150x150/f8fafc/94a3b8?text=Logo'">
+                </div>
+                
+                <!-- Δεξιά πλευρά: Τίτλος και Κουμπιά -->
+                <div class="flex flex-col w-full flex-grow">
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-800 mb-4 text-center sm:text-left">Αγωνιστικές Κινήσεις</h2>
+                    
+                    <div class="flex flex-col gap-3 w-full">
+                        <a href="https://www.instagram.com/agonistikes_kiniseis/?__pwa=1" target="_blank" rel="noopener noreferrer" 
+                           class="btn-social flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white font-semibold shadow-sm w-full">
+                            <i class="fab fa-instagram text-xl"></i> Instagram
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100076178547768" target="_blank" rel="noopener noreferrer" 
+                           class="btn-social flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#1877F2] text-white font-semibold shadow-sm w-full">
+                            <i class="fab fa-facebook text-xl"></i> Facebook
+                        </a>
+                        <a href="https://www.agonistikeskiniseis.org/" target="_blank" rel="noopener noreferrer" 
+                           class="btn-social flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-800 text-white font-semibold shadow-sm w-full">
+                            <i class="fas fa-globe text-xl"></i> Website
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-3xl shadow-sm border border-slate-200 p-6 flex flex-col sm:flex-row items-center gap-6 hover:shadow-md transition-shadow duration-300">
+                <div class="w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden flex items-center justify-center">
+                    <!-- Εδώ δεν βάλαμε p-2 γιατί το .jpg ίσως έχει δικό του φόντο -->
+                    <img src="Εκτός των Τειχών.jpg" alt="Εκτός των Τειχών" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/150x150/f8fafc/94a3b8?text=Logo'">
+                </div>
+                
+                <div class="flex flex-col w-full flex-grow">
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-800 mb-4 text-center sm:text-left">Εκτός των Τειχών</h2>
+                    
+                    <div class="flex flex-col gap-3 w-full">
+                        <a href="https://www.instagram.com/ektos_twn_teixwn/?__pwa=1" target="_blank" rel="noopener noreferrer" 
+                           class="btn-social flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white font-semibold shadow-sm w-full">
+                            <i class="fab fa-instagram text-xl"></i> Instagram
+                        </a>
+                        <a href="https://www.facebook.com/ektostwnteixwn" target="_blank" rel="noopener noreferrer" 
+                           class="btn-social flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#1877F2] text-white font-semibold shadow-sm w-full">
+                            <i class="fab fa-facebook text-xl"></i> Facebook
+                        </a>
+                        <a href="https://ektostonteixon.gr/" target="_blank" rel="noopener noreferrer" 
+                           class="btn-social flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-800 text-white font-semibold shadow-sm w-full">
+                            <i class="fas fa-globe text-xl"></i> Website
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-3xl shadow-sm border border-slate-200 p-6 flex flex-col sm:flex-row items-center gap-6 hover:shadow-md transition-shadow duration-300">
+                <div class="w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden flex items-center justify-center p-2">
+                    <img src="Σφεντόνα.jpg" alt="Σφεντόνα" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/150x150/f8fafc/94a3b8?text=Logo'">
+                </div>
+                
+                <div class="flex flex-col w-full flex-grow">
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-800 mb-4 text-center sm:text-left">Σφεντόνα</h2>
+                    
+                    <div class="flex flex-col gap-3 w-full">
+                        <a href="https://www.instagram.com/steki.sfentona/?__pwa=1" target="_blank" rel="noopener noreferrer" 
+                           class="btn-social flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white font-semibold shadow-sm w-full">
+                            <i class="fab fa-instagram text-xl"></i> Instagram
+                        </a>
+                        <a href="https://www.facebook.com/steki.sfentona" target="_blank" rel="noopener noreferrer" 
+                           class="btn-social flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#1877F2] text-white font-semibold shadow-sm w-full">
+                            <i class="fab fa-facebook text-xl"></i> Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-3xl shadow-sm border border-slate-200 p-6 flex flex-col sm:flex-row items-center gap-6 hover:shadow-md transition-shadow duration-300">
+                <div class="w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden p-2 flex items-center justify-center">
+                    <img src="Αναστροφα.png" alt="Ανάστροφα" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/150x150/f8fafc/94a3b8?text=Logo'">
+                </div>
+                
+                <div class="flex flex-col w-full flex-grow">
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-800 mb-4 text-center sm:text-left">Ανάστροφα</h2>
+                    
+                    <div class="flex flex-col gap-3 w-full">
+                        <a href="https://www.instagram.com/anastrofa_patra/?__pwa=1" target="_blank" rel="noopener noreferrer" 
+                           class="btn-social flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white font-semibold shadow-sm w-full">
+                            <i class="fab fa-instagram text-xl"></i> Instagram
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100092302447592" target="_blank" rel="noopener noreferrer" 
+                           class="btn-social flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#1877F2] text-white font-semibold shadow-sm w-full">
+                            <i class="fab fa-facebook text-xl"></i> Facebook
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="bg-white rounded-3xl shadow-sm border border-slate-200 p-6 flex flex-col sm:flex-row items-center gap-6 hover:shadow-md transition-shadow duration-300">
+                <div class="w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 bg-slate-50 border border-slate-100 rounded-2xl overflow-hidden p-2 flex items-center justify-center">
+                    <img src="Ρωγμή.jpg" alt="Ρωγμή" class="w-full h-full object-contain" onerror="this.src='https://placehold.co/150x150/f8fafc/94a3b8?text=Logo'">
+                </div>
+                
+                <div class="flex flex-col w-full flex-grow">
+                    <h2 class="text-xl sm:text-2xl font-bold text-slate-800 mb-4 text-center sm:text-left">Ρωγμή</h2>
+                    
+                    <div class="flex flex-col gap-3 w-full">
+                        <a href="https://www.instagram.com/rogmi_xanthi/?__pwa=1" target="_blank" rel="noopener noreferrer" 
+                           class="btn-social flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-gradient-to-r from-[#f09433] via-[#dc2743] to-[#bc1888] text-white font-semibold shadow-sm w-full">
+                            <i class="fab fa-instagram text-xl"></i> Instagram
+                        </a>
+                        <a href="https://www.facebook.com/rogmixanthi" target="_blank" rel="noopener noreferrer" 
+                           class="btn-social flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#1877F2] text-white font-semibold shadow-sm w-full">
+                            <i class="fab fa-facebook text-xl"></i> Facebook
+                        </a>
+                        <a href="https://rogmixanthi.blogspot.com/" target="_blank" rel="noopener noreferrer" 
+                           class="btn-social flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-slate-800 text-white font-semibold shadow-sm w-full">
+                            <i class="fas fa-globe text-xl"></i> Website
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+        </main>
+        
+        <footer class="text-center text-slate-400 text-sm mt-12 pb-6 border-t border-slate-200 pt-6">
+            &copy; 2026 Αγωνιστικές Κινήσεις.
+        </footer>
+    </div>
+
+</body>
+</html>
